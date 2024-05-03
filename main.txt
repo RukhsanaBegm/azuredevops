@@ -1,0 +1,6 @@
+---
+pool:
+  name: "Azure pipelines"
+  vmImage: 'ubuntu-latest'
+trigger:
+  - main  
