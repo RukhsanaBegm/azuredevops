@@ -3,4 +3,14 @@ pool:
   name: "Azure pipelines"
   vmImage: 'ubuntu-latest'
 trigger:
-  - main  
+  - master:
+repository:
+  - repository: 'azuredevopstemplates'
+    name: 'GitPracticeRepo/AzureDevopsReusableTemplates'
+    endpoint: 'github.com
+    type: github
+    ref: 'refs/head/main'
+steps:
+  - template: java/maven-build-simple.yaml@azuredevopstemplates
+    parameters:
+      jdkV      
